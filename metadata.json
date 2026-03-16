@@ -1,6 +1,6 @@
 {
-  "name": "APKURL Blocker",
-  "description": "A privacy-focused security tool designed to analyze Android APK files for dangerous permissions and scan URLs for phishing patterns using advanced AI analysis.",
+  "name": "APKURL Blocker Pro",
+  "description": "A full-stack security ecosystem featuring an Android Kotlin client and a FastAPI ML backend for advanced URL and APK threat detection.",
   "requestFramePermissions": [
     "camera"
   ]

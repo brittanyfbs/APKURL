@@ -16,9 +16,17 @@ export const HomeView: React.FC<HomeViewProps> = ({ stats, recentScans, onScanUR
   return (
     <div className="animate-fadeIn space-y-8">
       {/* Welcome Section */}
-      <section>
-        <h2 className="text-3xl font-black text-slate-900 tracking-tight leading-none">Security Center</h2>
-        <p className="text-sm text-slate-500 mt-2 font-medium">Dual-engine AI protection is active and monitoring.</p>
+      <section className="relative">
+        <div className="flex items-center justify-between">
+          <div>
+            <h2 className="text-3xl font-black text-slate-900 tracking-tight leading-none">Security Center</h2>
+            <p className="text-sm text-slate-500 mt-2 font-medium">Dual-engine AI protection is active and monitoring.</p>
+          </div>
+          <div className="bg-emerald-50 border border-emerald-100 px-3 py-1.5 rounded-2xl flex items-center gap-2 animate-pulse">
+            <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
+            <span className="text-[10px] font-black text-emerald-600 uppercase tracking-wider">Backend Ready</span>
+          </div>
+        </div>
       </section>
 
       {/* Main Actions Grid */}
