@@ -1,5 +1,5 @@
 {
-  "name": "APKURL Blocker Pro",
+  "name": "APKURL Blocker",
   "description": "A full-stack security ecosystem featuring an Android Kotlin client and a FastAPI ML backend for advanced URL and APK threat detection.",
   "requestFramePermissions": [
     "camera"

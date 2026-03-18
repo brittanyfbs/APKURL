@@ -41,7 +41,7 @@ export const ResultView: React.FC<ResultViewProps> = ({ result, onClose }) => {
     <div className="animate-fadeIn pb-24 space-y-6">
       <button 
         onClick={onClose} 
-        className="flex items-center gap-1.5 text-slate-400 font-black text-xs uppercase tracking-widest hover:text-slate-800 transition-colors"
+        className="flex items-center gap-1.5 text-slate-600 font-black text-xs uppercase tracking-widest hover:text-slate-900 transition-colors"
       >
         <ChevronLeft size={16} /> Back to Center
       </button>

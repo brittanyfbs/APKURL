@@ -16,17 +16,8 @@ export const HomeView: React.FC<HomeViewProps> = ({ stats, recentScans, onScanUR
   return (
     <div className="animate-fadeIn space-y-8">
       {/* Welcome Section */}
-      <section className="relative">
-        <div className="flex items-center justify-between">
-          <div>
-            <h2 className="text-3xl font-black text-slate-900 tracking-tight leading-none">Security Center</h2>
-            <p className="text-sm text-slate-500 mt-2 font-medium">Dual-engine AI protection is active and monitoring.</p>
-          </div>
-          <div className="bg-emerald-50 border border-emerald-100 px-3 py-1.5 rounded-2xl flex items-center gap-2 animate-pulse">
-            <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
-            <span className="text-[10px] font-black text-emerald-600 uppercase tracking-wider">Backend Ready</span>
-          </div>
-        </div>
+      <section>
+        <h2 className="text-3xl font-black text-slate-900 tracking-tight leading-none">Security Center</h2>
       </section>
 
       {/* Main Actions Grid */}
@@ -50,8 +41,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ stats, recentScans, onScanUR
       </section>
 
       {/* Insight Dashboard */}
-      <section className="dark-glass rounded-[32px] p-6 text-white shadow-xl relative overflow-hidden border border-white/5">
-        <div className="absolute -right-4 -top-4 opacity-10 blur-xl w-32 h-32 bg-blue-500 rounded-full"></div>
+      <section className="dark-glass rounded-[32px] p-6 text-white relative overflow-hidden">
         <div className="relative z-10 flex flex-col gap-6">
           <div className="flex items-center justify-between">
             <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Dashboard Overview</span>
@@ -131,9 +121,9 @@ export const HomeView: React.FC<HomeViewProps> = ({ stats, recentScans, onScanUR
 const ActionButton = ({ onClick, icon, title, subtitle, color }: { onClick: () => void, icon: React.ReactNode, title: string, subtitle: string, color: string }) => (
   <button 
     onClick={onClick}
-    className="flex flex-col items-start p-5 bg-white border border-slate-200 rounded-[32px] hover:shadow-2xl hover:shadow-slate-200 transition-all group relative overflow-hidden active:scale-95"
+    className="flex flex-col items-start p-5 bg-white border border-slate-200 rounded-[32px] hover:border-blue-200 transition-all group relative overflow-hidden active:scale-95"
   >
-    <div className={`w-12 h-12 ${color} rounded-[20px] flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform shadow-lg shadow-inherit/20`}>
+    <div className={`w-12 h-12 ${color} rounded-[20px] flex items-center justify-center text-white mb-4 transition-transform`}>
       {icon}
     </div>
     <div className="text-left">

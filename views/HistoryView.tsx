@@ -1,6 +1,6 @@
 
-import React, { useState } from 'react';
-import { Trash2, Link2, FileCode, Search } from 'lucide-react';
+import React from 'react';
+import { Trash2, Link2, FileCode } from 'lucide-react';
 import { ScanResult, RiskLevel } from '../types';
 
 interface HistoryViewProps {
@@ -10,14 +10,6 @@ interface HistoryViewProps {
 }
 
 export const HistoryView: React.FC<HistoryViewProps> = ({ history, onSelectItem, onClear }) => {
-  const [searchQuery, setSearchQuery] = useState('');
-
-  const filteredHistory = history.filter(item => 
-    item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    item.riskLevel.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    item.type.toLowerCase().includes(searchQuery.toLowerCase())
-  );
-
   return (
     <div className="animate-fadeIn">
       <div className="flex items-center justify-between mb-6">
@@ -29,30 +21,19 @@ export const HistoryView: React.FC<HistoryViewProps> = ({ history, onSelectItem,
         )}
       </div>
 
-      <div className="relative mb-6">
-        <input 
-          type="text" 
-          placeholder="Search history..."
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-          className="w-full p-3 pl-10 bg-white border border-slate-100 rounded-xl text-sm focus:ring-2 focus:ring-blue-500 outline-none"
-        />
-        <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 w-4 h-4" />
-      </div>
-
       <div className="space-y-3">
-        {filteredHistory.length === 0 ? (
+        {history.length === 0 ? (
           <div className="text-center py-20">
             <div className="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
                <Clock className="w-8 h-8 text-slate-300" />
             </div>
             <p className="text-slate-500 font-medium">No history found</p>
             <p className="text-slate-400 text-xs mt-1">
-              {searchQuery ? 'Try a different search term.' : 'Your scan history will appear here.'}
+              Your scan history will appear here.
             </p>
           </div>
         ) : (
-          filteredHistory.map((scan) => (
+          history.map((scan) => (
             <button
               key={scan.id}
               onClick={() => onSelectItem(scan)}

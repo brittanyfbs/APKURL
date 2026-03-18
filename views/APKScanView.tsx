@@ -70,7 +70,7 @@ export const APKScanView: React.FC<APKScanViewProps> = ({ onCancel, onComplete }
     <div className="animate-fadeIn min-h-[60vh] flex flex-col">
       <button 
         onClick={onCancel} 
-        className="mb-6 flex items-center gap-1.5 text-slate-400 hover:text-slate-800 transition-colors font-bold text-sm group"
+        className="mb-6 flex items-center gap-1.5 text-slate-600 hover:text-slate-900 transition-colors font-bold text-sm group"
       >
         <ChevronLeft size={20} className="group-hover:-translate-x-1 transition-transform" /> Back
       </button>
@@ -126,10 +126,6 @@ export const APKScanView: React.FC<APKScanViewProps> = ({ onCancel, onComplete }
           </div>
           
           <div className="flex flex-col items-center gap-4">
-             <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-slate-100 shadow-sm max-w-[200px]">
-                <FileCode className="w-4 h-4 text-slate-400 shrink-0" />
-                <span className="text-[11px] font-bold text-slate-600 truncate">{fileName}</span>
-             </div>
              <div className="space-y-2">
                 <h3 className="text-2xl font-black text-slate-900 tracking-tight">Analyzing APK...</h3>
                 <div className="flex justify-center">
@@ -138,6 +134,12 @@ export const APKScanView: React.FC<APKScanViewProps> = ({ onCancel, onComplete }
                   </span>
                 </div>
              </div>
+          </div>
+
+          <div className="mt-12 max-w-[260px]">
+            <p className="text-[10px] font-bold text-slate-400 bg-white/50 px-6 py-3 rounded-2xl border border-slate-100 shadow-sm leading-tight text-center">
+              AI is smart but can make mistakes. It is not 100% correct. Please stay safe.
+            </p>
           </div>
         </div>
       )}

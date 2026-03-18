@@ -11,19 +11,14 @@ interface LayoutProps {
 
 export const Layout: React.FC<LayoutProps> = ({ children, activeTab, setActiveTab, showNav = true }) => {
   return (
-    <div className="flex flex-col min-h-screen max-w-md mx-auto bg-slate-50 shadow-2xl relative overflow-hidden ring-1 ring-slate-200">
+    <div className="flex flex-col min-h-screen max-w-md mx-auto bg-white relative overflow-hidden">
       {/* Premium Header */}
-      <header className="glass border-b border-white/50 p-4 sticky top-0 z-[60] flex items-center justify-between">
+      <header className="bg-[#03050a] border-b border-white/5 p-4 sticky top-0 z-[60] flex items-center justify-between">
         <div className="flex items-center gap-2.5">
-          <div className="bg-blue-600 p-1.5 rounded-xl shadow-lg shadow-blue-200">
+          <div className="bg-blue-600 p-1.5 rounded-xl shadow-lg">
             <ShieldCheck className="text-white w-5 h-5" />
           </div>
-          <h1 className="text-base font-extrabold text-slate-800 tracking-tight">APKURL<span className="text-blue-600">.</span></h1>
-        </div>
-        <div className="flex items-center gap-2">
-          <div className="text-[10px] font-black bg-blue-600 text-white px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
-            PRO
-          </div>
+          <h1 className="text-base font-extrabold text-white tracking-tight">APKURL<span className="text-blue-600">.</span></h1>
         </div>
       </header>
 

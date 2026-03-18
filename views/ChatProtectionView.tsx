@@ -136,8 +136,11 @@ export const ChatProtectionView: React.FC<ChatProtectionViewProps> = ({ onScanCo
               <ShieldAlert className="w-8 h-8 text-red-600 animate-pulse" />
             </div>
             <h4 className="text-lg font-black text-slate-800 text-center mb-2">Suspicious Link!</h4>
-            <p className="text-xs text-slate-500 text-center mb-6 leading-relaxed">
+            <p className="text-xs text-slate-500 text-center mb-4 leading-relaxed">
               Our AI engine detected a URL in your latest message. It might be a phishing attempt.
+            </p>
+            <p className="text-[9px] text-slate-400 text-center mb-6 italic">
+              * AI is not always 100% right.
             </p>
             <div className="bg-slate-50 p-3 rounded-xl mb-6 truncate text-[10px] font-mono text-slate-400 border border-slate-100">
               {detectedUrl}
